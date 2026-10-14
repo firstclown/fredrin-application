@@ -1,0 +1,56 @@
+.fit {
+  background: radial-gradient(1000px 420px at 10% 0%, #16306b 0%, transparent 60%), var(--navy);
+}
+
+.label code {
+  color: var(--blue-light);
+}
+
+.intro {
+  font-size: 18px;
+  color: #cbd5e1;
+  max-width: 720px;
+  margin: 10px 0 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background: var(--navy-2);
+  border: 1px solid #22406e;
+  border-radius: var(--radius-card);
+  padding: 28px;
+}
+
+.title {
+  font-family: var(--mono);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--blue-light);
+  margin-bottom: 10px;
+}
+
+.body {
+  font-size: 16px;
+  color: var(--white);
+}
+
+.summary {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: #94a3b8;
+  margin-top: 32px;
+}
+
+@media (max-width: 760px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    padding: 22px;
+  }
+}
