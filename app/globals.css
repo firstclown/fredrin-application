@@ -1,0 +1,102 @@
+:root {
+  /* Colors — blue + amber, color-blind-safe; never color-alone meaning */
+  --navy: #0a1a33;
+  --navy-2: #10264a;
+  --term-bg: #06101f;
+  --ink: #0f172a;
+  --muted: #475569;
+  --blue: #2563eb;
+  --blue-light: #60a5fa;
+  --sky: #dbeafe;
+  --paper: #f6f8fc;
+  --white: #ffffff;
+  --line: #e2e8f0;
+  --amber: #f59e0b; /* CTA + prompt only */
+
+  /* Fonts — the --font-* variables are set by next/font in app/layout.tsx */
+  --sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: var(--font-jetbrains-mono), ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --radius-card: 16px;
+  --nav-height: 56px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
+}
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+/* Layout helpers shared by every section */
+.wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-dark {
+  background: var(--navy);
+  color: var(--white);
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 36px;
+  letter-spacing: -0.015em;
+}
+
+/* Terminal text colors, for use inside <Terminal> bodies */
+.t-prompt {
+  color: var(--amber);
+}
+.t-key {
+  color: var(--blue-light);
+}
+.t-dim {
+  color: #64748b;
+}
+.t-white {
+  color: var(--white);
+}
+.t-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background: var(--blue-light);
+  vertical-align: -3px;
+}
+
+@media (max-width: 760px) {
+  .wrap {
+    padding: 0 22px;
+  }
+  .section {
+    padding: 56px 0;
+  }
+  h2 {
+    font-size: 30px;
+  }
+}
